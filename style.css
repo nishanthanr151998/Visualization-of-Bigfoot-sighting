@@ -1,0 +1,13 @@
+.tooltip {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 12px;
+    pointer-events: none;
+}
+
+.selected {
+    stroke-width: 2px; /* Increase the border thickness for selected state */
+    stroke: darkgreen; /* Change the border color (if desired) */
+}

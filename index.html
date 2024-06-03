@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <title>Homework #4: Innovative Visualization Design - CSE 578 - Fall 2023</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+    <script src="https://cdn.rawgit.com/jasondavies/d3-cloud/v1.2.5/build/d3.layout.cloud.js"></script>
+
+
+</head>
+
+<body>
+    <div class="myContainer">
+        <h1 class="text-center">Homework #4: Innovative Visualization Design</h1>
+        <h3 class="text-center">Nishanthan Rengaharan - nrengaha@asu.edu</h3>
+        <h1 class="text-center">BIGFOOT SIGHTINGS IN AMERICA</h1>
+        <hr>
+
+        <div class="controls">
+            <div class="row">
+
+                <div class="col-1">Class: </div>
+                <div class="col-2">
+
+                    <label class="col-2" class="checkbox"><input type="checkbox" name="selectAll"
+                            onchange="selectAll(this)" checked> All</label>
+                    <label class="col-2" class="checkbox"><input type="checkbox" name="checkbox" value="Class A"
+                            onchange="drawChart()" checked>A</label>
+                    <label class="col-2" class="checkbox"><input type="checkbox" name="checkbox" value="Class B"
+                            onchange="drawChart()" checked>B</label>
+                    <label class="col-2" class="checkbox"><input type="checkbox" name="checkbox" value="Class C"
+                            onchange="drawChart()" checked>C</label>
+
+                </div>
+
+            </div>
+
+        </div>&nbsp;&nbsp;&nbsp;
+
+        <hr>
+
+        <div class="row">
+            <div class="col-6">
+                <div id="map" style="border: 1px solid black; margin: auto; display: block;"></div>
+            </div>
+            <div class="col-6">
+                <div id="empty-map" style="border: 1px solid black; margin: auto; display: block;"></div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-6">
+                <div id="word-cloud" style="border: 1px solid black; margin: auto; display: block;"></div>
+            </div>
+            <div class="col-6">
+                <h1>Description</h1>
+                <p>
+                    This innovative visualization explores Bigfoot sightings in America, categorizing them into different
+                    classes (Class A, B, and C).  
+                </p>
+
+                <p>
+                    The map on the top left provides a geographical representation of sightings, with each state
+                    shaded based on the frequency of encounters. Use the checkboxes to filter sightings by classification and interact with the visualizations. The statistics
+                    section provides an overview of the total and filtered reports.
+                </p>
+
+                <p>
+                    The map on the top right provides a representation of sightings using tiny foot steps, with each state
+                    shaded based on the overall frequency of encounters.  
+                </p>
+
+                <p>
+                    The word cloud on the bottom left visualizes the most frequently
+                    mentioned words in the sighting reports, offering additional insights.
+                    The word cloud and the top left map are linked. when you click any of the state, you will get corresponding word cloud.
+                </p>
+
+                <p>
+                    Explore the map, word cloud, and descriptive
+                    elements to gain a comprehensive understanding of Bigfoot sightings in the United States.
+                </p>
+            </div>
+        </div>
+
+
+        <div id="statistics"></div>
+
+
+        <div id="tooltip" class="tooltip" style="opacity: 0;"></div>
+</body>
+
+</html>

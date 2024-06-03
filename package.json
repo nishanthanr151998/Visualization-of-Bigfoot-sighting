@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "leaflet": "^1.9.4",
+    "topojson-client": "^3.1.0"
+  }
+}
